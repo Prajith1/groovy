@@ -1,0 +1,10 @@
+node {
+   stage ("SCM"){
+       git 'https://github.com/psgit1/Java-Proj1/'
+   }
+   stage ("Build")
+   {
+        sh label: '', script: '''javac *.java
+        java Simple'''
+   }
+}
